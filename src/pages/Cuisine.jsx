@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams,Link } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from 'styled-components';
+import {Content ,Wrap,media} from '../globalStyles'
 
 function Cuisine() {
     const [cuisine,setCuisine] = useState([])
@@ -42,24 +43,7 @@ function Cuisine() {
 }
 
 
-const Content = styled.section`
-width: fit-content;
-    text-align: center;
-    padding-top: 2rem;
-    margin: auto;
 
-    h3{
-        margin-bottom: 3rem;
-    }
-`
-const Wrap= styled.div`
-    width: 100%;
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(4,400px);
-    column-gap:2.5rem;
-    row-gap: 2.5rem;
-`;
 const SLink= styled(Link)`
     text-decoration: none;
     color:black;

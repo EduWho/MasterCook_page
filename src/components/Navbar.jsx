@@ -17,7 +17,7 @@ function Navbar() {
     <NavbarContainer>
         <NavWrap>
             <GiCook/>
-            <Logo to="/">MasterCook</Logo>
+            <Logo to="/" >MasterCook</Logo>
         </NavWrap>
         <FormStyled onSubmit={submitHandler}>
             <InputContainer>
@@ -61,6 +61,7 @@ const Logo= styled(Link)`
     font-family: 'Oleo Script Swash Caps', cursive;
     font-weight:700;
     font-size: 2rem;
+    cursor:pointer;
 `;
 const FormStyled= styled.form`
 

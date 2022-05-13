@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react'
+import {Content ,Wrap,media} from '../globalStyles'
 
 
 function Home() {
@@ -28,13 +29,13 @@ function Home() {
             
             {popular.map((recipe)=>{
                 return(
-                    <Link to={"/recipe/" +recipe.id}>
+                    <SLink to={"/recipe/" +recipe.id}>
                         <Card key={recipe.id}>
                         
                             <img src={recipe.image} alt=''/>
                             <h4>{recipe.title}</h4>
                         </Card>
-                    </Link>
+                    </SLink>
                 )
             })
             }
@@ -43,25 +44,10 @@ function Home() {
     </Content>
   )
 }
-
-const Content = styled.section`
-width: fit-content;
-    text-align: center;
-    padding-top: 2rem;
-    margin: auto;
-
-    h3{
-        margin-bottom: 3rem;
-    }
+const SLink= styled(Link)`
+    text-decoration: none;
+    color:black;
 `
-const Wrap= styled.div`
-    width: 100%;
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(4,400px);
-    column-gap:2.5rem;
-    row-gap: 2.5rem;
-`;
 const Card= styled.div`
 width: 400px;
 img{
